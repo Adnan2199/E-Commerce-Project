@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'League Spartan', sans-serif;
+    box-sizing: border-box;
+}
+/* start of login css */
+body
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(120deg,white, crimson);
+}
+
+#login
+{
+    position: absolute;
+    width:400px;
+    height:450px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+}
+
+#login .content h1{ 
+    padding: 50px 0 0 0 ;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 30px;
+    /* border-bottom: 1px solid silver; */
+}
+
+#login .content form{
+    padding: 0 40px;
+    box-sizing: border-box;
+} 
+
+#login .content form .text
+{
+    position:relative;
+    border-bottom: 2px solid #adadad;
+    margin: 50px 0;
+}
+#login .content .text input{
+
+    width:100%;
+    padding: 0px 5px;
+    background: none;
+    border: none;
+    outline: none;
+    height:40px;
+    font-size: 16px;
+}
+ .text label{
+    position: absolute;
+    left:5px;
+    top:50%;
+    transition: 0.5s;
+    transform: translateY(-50%);
+    color: #adadad;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+#login .content .text span::before
+{
+    content: '';
+    position: absolute;
+    top:40px;
+    left:0;
+    width:0%;
+    height:2px;
+    background: #2691d9;  
+}
+
+#login .text input:focus ~ label,
+#login .text input:focus ~ label{
+    top:-5px;
+    left:0;
+    color:#2691d9;
+}
+
+#login .text input:focus ~ span::before,
+#login .text input:valid ~ span::before{
+    width:100%;
+}
+
+#login .links{
+    margin: -5px 0 20px 5px;
+
+    cursor:pointer;
+}
+#login .links a{
+  text-decoration: none;
+}
+
+#login .links:hover{
+    text-decoration: underline;
+}
+
+input[type="submit"]{
+    width:100%;
+    height:50px;
+    border: #2691d9;
+    background: #0074D9 ;
+    border-radius: 8px ;
+    font-size: 18px ;
+    color: white;
+    outline:none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background-color: lightgreen     ;
+    transition: 1s;
+}
