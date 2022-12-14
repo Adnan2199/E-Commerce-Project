@@ -170,46 +170,33 @@ p {
 }
 
 
-
-footer {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 30px;
-    padding:15px;
-    background-color: lightgray;
-    border-radius: 4px;
-}
-
-footer .col {
-    display:flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-footer .logo {
-    margin-bottom:30px;
-}
-
-footer h4{
-    font-size: 22px;
-    padding-bottom:20px;
-}
-
-footer p {
-    font-size: 17px;
-    text-decoration: none;
-    margin:0 0 8px 0;
-}
-
-footer a{
-    font-size: 17px;
-    text-decoration: none;
-    color:black;
-    margin:0 0 8px 0;
-    transition: 0.5s;
-}
-
-footer a:hover {
-    color:red;
-}
+ <footer class="footer" class="section-p1">
+            <div class="col">
+                <img src="">
+                <h4>Contact</h4>
+                <p><strong>Address:</strong>P.O. Box No.: 1908,<br> Bull Temple Road,
+                    Bangalore - 560 019 <br>
+                    Karnataka, India.</p>
+                <p><strong>Phone:</strong>+91-80-26614357</p>
+                <p><strong>Hours:</strong>10:00-17:00 , Mon-Sat</p>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="about.html">About us</a>
+                <a href="#">Delivery Information</a>
+                <a href="termsandconditions.html">Terms & Conditions</a>
+                <a href="contact.html">Contact us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="login.html">Login</a>
+                <a href="#">View Cart</a>
+                <a href="#">Help</a>
+            </div>
+            <div class="col">
+                <h4>Feedback</h4>
+                <a href="rate.html">Rate Us</a>
+                <a href="#">Send us an Email</a>
+            </div>
+            
+        </footer>
