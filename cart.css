@@ -152,7 +152,8 @@ p {
     width: 50%;
     margin-bottom: 30px;
 }
-#coupon h3{
+#coupon h3 ,
+#subtotal h3{
     padding-bottom: 15px;
 }
 #coupon input{
@@ -162,11 +163,30 @@ p {
     margin-right: 10px;
     border: 1px solid #ce5656;
 }
-#coupon button{
+#coupon button,
+#subtotal button{
     background-color: #ce5656;
     color: aliceblue;
     padding: 10px 20px;
     
+}
+
+#subtotal{
+width:50%;
+margin-bottom: 30px;
+border:1px solid #ce5656;
+padding: 30px;
+}
+#subtotal table{
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+#subtotal table td{
+    width: 50%;
+    border:1px solid #ce5656;
+    padding: 10px;
+    font-size: 13px;
 }
 
 
