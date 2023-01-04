@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="login.css" rel="stylesheet">
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+</head>
+<body>
+
+  <section id="header">
+    <a href=""><img src="Images/logo.png" class="logo"></a>
+    <div>
+        <ul id="navbar">
+            <li><a href="search.html"><i class="fas fa-search" aria-hidden="true"></i></a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+            <li><a class="active" href="login.html"><i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+            </a></li>
+        </ul>
+    </div>
+</section>
+
+  <section id="login"> 
+    <div class="content">
+        <div class="btn"><!--For the buttons-->
+            <div id="b"></div>
+            <button type="button" class="b" onclick="login()">Log In</button>
+            <button type="button" class="b" onclick="signup()">Sign up</button>
+        </div>
+
+        <form method="post" id="l">
+        <div class="text">
+        <input type ="text" required="required">
+        <span> </span>
+        <label>Username</label>
+        </div>
+
+        <div class="text">
+        <input type ="password" required="required">
+        <span> </span>
+        <label>Password</label>
+        </div>
+
+        <div class="links">
+            <a href="forgotpassword.html">Forgot Password</a>
+            <br>
+            <a href="login.html">New member? Sign up</a>
+        </div>
+        <input type="submit" value="Submit">
+        </form>
+        <!--For sign Up-->
+        <form id="s" method="post" class="texts" >
+            <div class="text">
+            <input type ="text" required="required">
+            <span> </span>
+            <label>Username</label>
+            </div>
+
+            <div class="text">
+                <input type ="text" required="required">
+                <span> </span>
+                <label>USN</label>
+                </div>
+
+            <div class="text">
+                <input type ="email" required="required">
+                <span> </span>
+                <label>Email Id</label>
+                </div>
+            
+            <div class="text">
+            <input type ="password" required="required">
+            <span> </span>
+            <label>Password</label>
+            </div>
+    
+            <div class="links">
+                <a href="termsandconditions.html">I agree to the terms & 
+                    conditions</a>
+                <br>
+                <a href="login.html">Already Signed up? Log in</a>
+            </div>
+            <input type="submit" value="Submit">
+            </form>
+           <script>
+               var x=document.getElementById("l");
+               var y=document.getElementById("s");
+               var z=document.getElementById("b");
+               function signup() {
+                   x.style.left="-300px";
+                   y.style.left="0px";//contols the horizontal movement
+                   z.style.left="160px";
+               }
+               function login() {
+                   x.style.left="10px";
+                   y.style.left="450px";
+                   z.style.left="0";
+               }
+           </script> 
+
+<!-- <footer class="footer" class="section-p1">
+    <div class="col">
+        <p><strong>Address: </strong>P.O. Box No.: 1908,<br> Bull Temple Road,
+            Bangalore - 560 019 <br>
+            Karnataka, India.</p>
+        <p><strong>Phone:</strong>+91-80-26614357</p>
+        <p><strong>Hours:</strong>10:00-17:00 , Mon-Sat</p>
+    </div>
+    <div class="col">
+        <h4>About</h4>
+        <a href="about.html">About us</a>
+        <a href="DeliveryInfo.html">Delivery Information</a>
+        <a href="termsandconditions.html">Terms & Conditions</a>
+        <a href="contact.html">Contact us</a>
+    </div>
+    <div class="col">
+        <h4>My Account</h4>
+        <a href="login.html">Login</a>
+        <a href="cart.html">View Cart</a>
+        <a href="contact.html">Help</a>
+    </div>
+    <div class="col">
+        <h4>Feedback</h4>
+        <a href="contact.html">Rate Us</a>
+        <a href="contact.html" id="rate">Send us an Email</a>
+    </div>   
+</footer> -->
+</body>
+</html>
