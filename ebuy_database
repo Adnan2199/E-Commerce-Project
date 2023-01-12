@@ -1,0 +1,75 @@
+create database ebuy_database;
+use ebuy_database;
+
+create table genre(
+gid int,
+genre varchar(20),
+noofproducts int,
+primary key(gid)
+);
+
+insert into genre values(101,'Stationary',4);
+insert into genre values(102,'Clothing',4);
+insert into genre values(103,'Club_Merchandise',4);
+insert into genre values(104,'Fashion',4);
+insert into genre values(105,'Electronics',4);
+
+create table product
+(
+pid int,
+gid int,
+pname varchar(20),
+cost int,
+primary key(pid),
+foreign key(gid) references genre(gid)
+);
+
+insert into product values (1,101,'Calculator',1400);
+insert into product values (2,101,'DBMS book',1400);
+insert into product values (3,101,'COA textbook',1400);
+insert into product values (4,101,'Pens',1400);
+insert into product values (5,102,'Hoodie',1400);
+insert into product values (6,102,'T-shirt ',1400);
+insert into product values (7,102,'Mech uniform',1400);
+insert into product values (8,102,'Calculator',1400);
+insert into product values (9,103,'Augmen AI Tshirt ',1400);
+insert into product values (10,103,'Chirantana Tshirt',1400);
+insert into product values (11,103,'IEEE Tshirt',1400);
+insert into product values (12,103,'WIE Tshirt',1400);
+insert into product values (13,104,'Calculator',1400);
+insert into product values (14,104,'Calculator',1400);
+insert into product values (15,104,'Calculator',1400);
+insert into product values (16,104,'Calculator',1400);
+create table rating
+(
+pid int,
+feedback varchar(50),
+stars int check(stars>0 and stars <5),
+foreign key(pid) references product(pid)
+);
+
+insert into rating values(1,'Nice product, working well',5);
+insert into rating values(2,'nice book to study',4);
+insert into rating values(10, 'loved this Tshirt',3);
+insert into rating values();
+insert into rating values();
+insert into rating values();
+insert into rating values();
+insert into rating values();
+
+create table payment
+(
+pid int,
+p_date date,
+pay_type varchar(20),
+amt int,
+foreign key(pid) references product(pid)
+);
+
+insert into payment values(1,'2023-01-11','COD',1400);
+insert into payment values(2,'2023-01-11','COD',1400);
+insert into payment values(3,'2023-01-11','COD',300);
+insert into payment values(4,'2023-01-11','COD',700);
+insert into payment values(5,'2023-01-11','COD',1400);
+insert into payment values(6,'2023-01-11','COD',1400);
+
