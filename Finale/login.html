@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="login.css" rel="stylesheet">
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <script src="validation.js" defer> </script>
+</head>
+<body>
+
+  <section id="header">
+    <a href=""><img src="Images/logo.png" class="logo"></a>
+    <div>
+        <ul id="navbar">
+            <li><a href="search.html"><i class="fas fa-search" aria-hidden="true"></i></a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+            <li><a class="active" href="login.html"><i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+            </a></li>
+        </ul>
+    </div>
+</section>
+
+  <section id="login"> 
+    <div class="content">
+        <div class="btn"><!--For the buttons-->
+            <div id="b"></div>
+            <button type="button" class="b" onclick="login()">Log In</button>
+            <button type="button" class="b" onclick="signup()">Sign up</button>
+        </div>
+
+        <form method="post" name="loginF" id="l" onsubmit="return validateForm()"> 
+            <!-- loginF -- myForm , name -- name , fname -- fname ,  -->
+        <div class="text" id="name">
+        <input type ="text" name="fname" required="required">
+        <span class="formerror"> </span>
+        <label>Username</label>
+        </div>
+
+        <div class="text" id="pass">
+        <input type ="password" name="fpass"required="required">
+        <span class="formerror" > </span>
+        <label>Password</label>
+        </div>
+
+        <div class="links">
+            <a href="forgotpassword.html">Forgot Password</a>
+            <br>
+            <a href="login.html">New member? Sign up</a>
+        </div>
+        <input type="submit" value="Submit">
+        </form>
+        <!-- <img src="./Images/check.jpg"> -->
+        <!--For sign Up-->
+        <form id="s" method="post" name="signupF" class="texts" >
+            <div class="text" id="name">
+            <input type ="text" name="sname" required="required">
+            <span class="formerror"> </span>
+            <label>Username</label>
+            </div>
+
+            <div class="text" id="usn">
+                <input type ="text" name="susn" required="required">
+                <span class="formerror"> </span>
+                <label>USN</label>
+                </div>
+
+            <div class="text" id="email">
+                <input type ="email" name="semail" required="required">
+                <span class="formerror"> </span>
+                <label>Email Id</label>
+                </div>
+            
+            <div class="text" id="pass">
+            <input type ="password" name="spass" required="required">
+            <span class="formerror"> </span>
+            <label>Password</label>
+            </div>
+    
+            <div class="links">
+                <a href="termsandconditions.html">I agree to the terms & 
+                    conditions</a>
+                <br>
+                <a href="login.html">Already Signed up? Log in</a>
+            </div>
+            <input type="submit" value="Submit">
+            </form>
+</body>
+</html> 
