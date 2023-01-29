@@ -23,26 +23,29 @@ function validateForm(){
     var returnval = true;//assuming it as true
     var name = document.forms['loginF']["fname"].value;
     var pass= document.forms['loginF']['fpass'].value;
-    // if(name.length<3){
-    //     seterror("name","*");
-    //     console.log('Hello');
-    //     returnval = false;
-    // }
+    var sname= document.forms['signupF']["sname"].value;
+
+    if(name.length<3){
+        seterror("name","*Length of name is too short");
+        returnval = false;
+    }
 
     if(pass.length!=8){
         seterror("pass","*Password should be of 8 characters");
         returnval = false;
     }
 
-    if(name.length<3){
-        seterror("name","*Length of name is too short");
-        returnval = false;
-    }
     if(pass[0]!=pass[0].toUpperCase())
     {
         seterror("pass","*First letter should be capital");
         returnval = false;
     }
+
+    if(sname.length<3){
+        seterror("sname","*Length of name is too short");
+        returnval = false;
+    }
+
 
     return returnval;
 }
